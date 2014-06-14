@@ -2,6 +2,7 @@
 var module = angular.module('curso',[]);
 
 
+
 module.controller('twoWayBindController',function($scope,userFactory){
     $scope.variableBind = "Mundo";
     $scope.user = {};
@@ -55,3 +56,32 @@ module.factory('userFactory',function(){
 
 
 });
+
+
+module.controller('calc',function($scope){
+
+
+
+    $scope.suma = function(){
+
+       $scope.sum.resultado = $scope.sum.num1 + $scope.sum.num2;
+
+
+    };
+
+    $scope.multi = function(){
+
+        $scope.mult.resultado = $scope.mult.num1 * $scope.mult.num2;
+
+    };
+
+});
+
+/*
+
+ TODO: module.service vrs module.factory ???
+
+ factory espera un return  del objeto.
+ con service se accesa con this.
+
+  */
